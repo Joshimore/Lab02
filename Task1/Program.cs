@@ -17,7 +17,7 @@ namespace Task1
             adressinfo.City = "Brovaru";
             adressinfo.Street = "Peremohi st.";
             adressinfo.House = 321;
-            adressinfo.Apartment = 16;
+            adressinfo.Apartment = 17;
 
             Console.WriteLine ($"Index: {adressinfo.Index} | Country: {adressinfo.Country} | City: {adressinfo.City} | Street: {adressinfo.Street} | House: {adressinfo.House} | Apartment: {adressinfo.Apartment}");
         }
