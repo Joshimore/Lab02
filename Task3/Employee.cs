@@ -8,33 +8,34 @@ namespace Task3
 {
     internal class Employee
     {
-        private string name;
-        private string surname;
-        private string post;
+        private double staj;
         private int salary;
-        private int experience;
-        private int taxe;
+        public string name { get; set; }
+        public string surname { get; set; }
 
-        public string Name
+        public Employee (string name, string surname) //constructor Employee
         {
+            this.name = name;
+            this.surname = surname;
+        }
+
+        public int Salary
+        {
+            get { return salary; }
             set
             {
-                name = value;
-            }
-            get
-            {
-                return name;
+                if (value >= 0)
+                    Salary = value;
             }
         }
-        public string Surname
+
+        public double Staj
         {
+            get { return staj; }
             set
             {
-                surname= value;
-            }
-            get
-            {
-                return surname;
+                if (value >= 0)
+                    Staj = value;
             }
         }
     }
