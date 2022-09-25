@@ -19,12 +19,8 @@ namespace Task3
             inform.YourExperience = 10;
             inform.Taxes = 0.5;
             inform.Amount = 300;
-            inform.CalculatorProg();
-
-            Console.WriteLine("Employee's name: {0} {1}", inform.Name, inform.Surname);
-            Console.WriteLine("Ocupation: {0}", inform.Ocupation);
-            Console.WriteLine("Experience: {0}", inform.YourExperience);
-            Console.WriteLine("An amount: {0}", inform.CalculatorProg());
+            
+            inform.Info();
         }
     }
 }

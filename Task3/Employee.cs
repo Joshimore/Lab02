@@ -8,7 +8,7 @@ namespace Task3
 {
     internal class Employee
     {
-        public Employee(int experience, string name, string surname, string ocupation, double taxes, double amount)
+        public Employee(string name, string surname, string ocupation, int experience, double taxes, double amount)
         {
             Name = name;
             Surname = surname;
@@ -28,6 +28,14 @@ namespace Task3
         public double CalculatorProg()
         {
             return Experience * Amount * (1 - Taxes);
+        }
+
+        public void Info()
+        {
+            Console.WriteLine("Employee's name: {0} {1}", Name, Surname);
+            Console.WriteLine("Ocupation: {0}", Ocupation);
+            Console.WriteLine("Experience: {0}", YourExperience);
+            Console.WriteLine("An amount: {0}", CalculatorProg());
         }
     }
 }
