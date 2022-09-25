@@ -14,7 +14,8 @@ namespace Task4
         public int Age { get; set; }
         public DateTime CreationTime { get; set; }
 
-        public Usser(string login, string name, string surname, int age, DateTime creationtime)
+        //constructor
+        public User(string login, string name, string surname, int age, DateTime creationtime)
         {
             this.Login = login;
             this.Name = name;
