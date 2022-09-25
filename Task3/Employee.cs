@@ -8,35 +8,34 @@ namespace Task3
 {
     internal class Employee
     {
-        private double staj;
-        private int salary;
-        public string name { get; set; }
-        public string surname { get; set; }
+        public int YourExperience { get; set; }
+        public string Name { get; set { Name = value}; }
+        public string Surname { get; set { Surname = value}; }
+        public string Ocupation { get; set { Ocupation = value}; }
+        public double Taxes { get; set { Taxes = value}; 
+        public double Amount { get; set { Amount = value}; }
 
-        public Employee (string name, string surname) //constructor Employee
+        //constructor
+        public Employee(int experience, string name, string surname, string ocupation, double taxes, double amount)
         {
-            this.name = name;
-            this.surname = surname;
+            this.Name = name;
+            this.Surname = surname;
+            this.Ocupation = ocupation;
+            this.YourExperience = experience;
+            this.Taxes = taxes;
+            this.Amount = amount;
         }
 
-        public int Salary
+        public double CalculatorProg()
         {
-            get { return salary; }
-            set
-            {
-                if (value >= 0)
-                    Salary = value;
-            }
+            return Experience * Amount * (1 - Taxes)
         }
 
-        public double Staj
+        public void MainInfo()
         {
-            get { return staj; }
-            set
-            {
-                if (value >= 0)
-                    Staj = value;
-            }
+            Console.WriteLine("Name:", Name, Surname);
+            Console.WriteLine("Ocupation:", Ocupation);
+            Console.WriteLine("Amount:", CalculatorProg());
         }
     }
 }
