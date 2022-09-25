@@ -16,7 +16,7 @@ namespace Task3
             inform.Name = "John";
             inform.Surname = "Dorian";
             inform.Ocupation = "Junior dev.";
-            inform.YourExperience = 10;
+            inform.Experience = 10;
             inform.Taxes = 0.5;
             inform.Amount = 300;
             

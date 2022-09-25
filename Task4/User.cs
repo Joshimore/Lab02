@@ -8,20 +8,40 @@ namespace Task4
 {
     internal class User
     {
-        public string Login { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
-        public DateTime CreationTime { get; set; }
+        public string Login
+        {
+            get { return Login; }
+            set { Login = value; }
+        }
+        public string Name
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
+        public string Surname
+        {
+            get { return Surname; }
+            set { Surname = value; }
+        }
+        public int Age
+        {
+            get { return Age; }
+            set { Age = value; }
+        }
+        public DateTime CreationTime
+        {
+            get { return CreationTime; }
+            set { CreationTime = value; }
+        }
 
         //constructor
         public User(string login, string name, string surname, int age, DateTime creationtime)
         {
-            this.Login = login;
-            this.Name = name;
-            this.Surname = surname;
-            this.Age = age;
-            this.CreationTime = creationtime;
+            Login = login;
+            Name = name;
+            Surname = surname;
+            Age = age;
+            CreationTime = creationtime;
         }
 
         public void usrinfo()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,18 +11,14 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type 'Info' to show an information about the user");
+            User info = new User();
+            info.Login = "ypuppew";
+            info.Name = "Eric";
+            info.Surname = "Nordwitch";
+            info.Age = 24;
+            info.CreationTime = "now";
 
-            switch (Console.ReadLine())
-            {
-                case "Info"
-                    User user = new("Bryan", "Johnson", 45, "bbqd", DateTime.Now);
-                    user.usrinfo();
-                    break;
-                default:
-                    Console.WriteLine("**INPUT ERROR**");
-                    break;
-            }
+            info.usrinfo();
         }
     }
 }

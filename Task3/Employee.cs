@@ -14,12 +14,12 @@ namespace Task3
             Name = name;
             Surname = surname;
             Ocupation = ocupation;
-            YourExperience = experience;
+            Experience = experience;
             Taxes = taxes;
             Amount = amount;
         }
 
-        public int YourExperience { get { return YourExperience; } set { YourExperience = value; } }
+        public int Experience { get { return Experience; } set { Experience = value; } }
         public string Name { get { return Name; } set { Name = value; } }
         public string Surname { get { return Surname; } set { Surname = value; } }
         public string Ocupation { get { return Ocupation; } set { Ocupation = value; } }
@@ -28,14 +28,14 @@ namespace Task3
 
         public double CalculatorProg()
         {
-            return Experience * Amount * (1 - Taxes);
+            return Amount * Experience * (1 - Taxes);
         }
 
         public void Info()
         {
             Console.WriteLine("Name and surname: {0} {1}", Name, Surname);
             Console.WriteLine("Ocupation: {0}", Ocupation);
-            Console.WriteLine("Experience: {0}", YourExperience);
+            Console.WriteLine("Experience: {0}", Experience);
             Console.WriteLine("An amount: {0}", CalculatorProg());
         }
     }
