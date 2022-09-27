@@ -8,48 +8,42 @@ namespace Task4
 {
     internal class User
     {
+        string login; 
+        string name;
+        string surname;
+        int age;
+        public readonly DateTime date;
         public string Login
         {
-            get { return Login; }
-            set { Login = value; }
+            set { login = value; }
+            get { return login; }
         }
         public string Name
         {
-            get { return Name; }
-            set { Name = value; }
+            set { name = value; }
+            get { return name;}
         }
         public string Surname
         {
-            get { return Surname; }
-            set { Surname = value; }
+            set { surname = value; }
+            get { return surname;}
         }
         public int Age
         {
-            get { return Age; }
-            set { Age = value; }
+            set { age = value; }
+            get { return age;}
         }
-        public DateTime CreationTime
+        public User()
         {
-            get { return CreationTime; }
-            set { CreationTime = value; }
+            date = DateTime.Now;
         }
-
-        //constructor
-        public User(string login, string name, string surname, int age, DateTime creationtime)
+        public User(string login, string name, string surname, int age)
         {
             Login = login;
             Name = name;
             Surname = surname;
             Age = age;
-            CreationTime = creationtime;
-        }
-
-        public void usrinfo()
-        {
-            Console.WriteLine("Name: ", Name, Surname);
-            Console.WriteLine("Age: ", Age);
-            Console.WriteLine("Login: ", Login);
-            Console.WriteLine("Creation time: ", CreationTime);
+            date = DateTime.Now;
         }
     }
 }
